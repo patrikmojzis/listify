@@ -1,0 +1,33 @@
+@import '../../../../../scss/variables.scss';
+
+.menuButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: $mutedColor;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 0;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $greyColor;
+    }
+
+    &.active {
+        background-color: $lightColor;
+        color: $primaryColor;
+    }
+
+    .menuIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

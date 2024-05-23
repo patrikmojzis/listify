@@ -1,0 +1,18 @@
+@import '../../../scss/variables.scss';
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+
+    .button {
+        margin-top: 0.5rem;
+    }
+}

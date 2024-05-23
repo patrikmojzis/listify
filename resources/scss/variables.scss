@@ -1,0 +1,28 @@
+$primaryColor: #E0426Dff;
+$lightColor: #FCFEFFff;
+$darkColor: #0b051c;
+$greyColor: #d1ccdd;
+$mutedColor: #6c6973;
+$dangerColor: #f44336;
+$bgColor: #F7F7F7;
+$shadowColor: rgba(230,230,230,1);
+$avatarColor: #0052cc;
+
+$screenSm: 576px;
+$screenMd: 768px;
+$screenLg: 992px;
+$screenXl: 1200px;
+$screenXxl: 1400px;
+
+$fontSize: 1rem;
+$fontSizeSm: calc($fontSize * 0.94);
+$fontSizeH1: calc($fontSize * 1.75 + 1.4vw);
+$fontSizeH2: calc($fontSize * 1.5 + 1vw);
+$fontSizeH3: calc($fontSize * 1.25 + 0.5vw);
+
+$containerGap: 2rem;
+$containerPadding: 1.5rem;
+
+$hoverOpacity: 0.93;
+$activeOpacity: 0.88;
+$pressableTransitionDuration: 0.25s;

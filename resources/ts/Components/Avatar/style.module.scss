@@ -1,0 +1,13 @@
+@import '../../../scss/variables.scss';
+
+.container {
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    background: $avatarColor;
+    border: 2px solid $bgColor;
+    color: $lightColor;
+}

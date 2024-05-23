@@ -1,0 +1,46 @@
+@import '../../../../../scss/variables.scss';
+
+.container {
+    position: fixed;
+    background-color: $lightColor;
+    box-shadow: 0 2px 5px 0 $shadowColor;
+    border-radius: .65rem;
+    padding: .75rem 1.1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    z-index: 10;
+
+    @media screen and (max-width: $screenMd) {
+        top: 1rem;
+        width: 90%;
+        left: 5%;
+        animation: slideDown 1s forwards;
+    }
+
+    @media screen and (min-width: $screenMd) {
+        bottom: 2rem;
+        right: 2rem;
+        animation: slideLeft 1s forwards;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../../scss/variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        min-height: 40px;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+.invitations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .invitation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.emptyText {
+    color: $mutedColor;
+}

@@ -1,0 +1,52 @@
+@import '../../../../../scss/variables.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: .5rem;
+    background: $lightColor;
+    padding: $containerPadding;
+    border-radius: .75rem;
+    transition: box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+
+    &.completed {
+        .content {
+            .title {
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .title {
+            font-weight: 500;
+        }
+
+        .description {
+            color: $mutedColor;
+            font-size: $fontSizeSm;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 2px 5px 0 $shadowColor;
+    }
+
+    .avatars {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        div {
+            margin-right: -0.75rem;
+        }
+    }
+}
+
+

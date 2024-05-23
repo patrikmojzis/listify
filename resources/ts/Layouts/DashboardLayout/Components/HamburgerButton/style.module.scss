@@ -1,0 +1,52 @@
+@import '../../../../../scss/variables.scss';
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+
+    @media screen and (max-width: $screenSm) {
+        display: flex;
+    }
+
+    &.active {
+        gap: 0;
+
+        /* Active state styles for the hamburger */
+
+        span:nth-child(1) {
+            transform: translateY(-7.5px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+            display: none;
+        }
+
+        span:nth-child(3) {
+            transform: translateY(5.5px) rotate(-45deg);
+        }
+    }
+
+    span {
+        width: 1.5rem;
+        height: 0.17rem;
+        border-radius: 10px;
+        transition: all 0.2s ease-out;
+        position: relative;
+        transform-origin: 1px;
+    }
+}
+
+.line {
+    background: $darkColor;
+}

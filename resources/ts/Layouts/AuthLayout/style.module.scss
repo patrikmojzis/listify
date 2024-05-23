@@ -1,0 +1,42 @@
+@import '../../../scss/variables.scss';
+
+.wrapper {
+    $contentMaxWidth: 450px;
+
+    display: grid;
+    grid-template-columns: minmax(auto, $contentMaxWidth) 1fr;
+    height: 100vh;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem;
+        box-sizing: border-box;
+
+        @media screen and (max-width: $contentMaxWidth) {
+            padding: 1.5rem;
+        }
+
+        .childrenContainer {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .copyright {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .background {
+        background-color: $darkColor;
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (max-width: $contentMaxWidth) {
+            display: none;
+        }
+    }
+}

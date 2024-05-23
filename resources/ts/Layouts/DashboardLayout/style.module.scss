@@ -1,0 +1,71 @@
+@import '../../../scss/variables.scss';
+
+.wrapper {
+    $menuMaxWidth: 250px;
+    $contentMaxWidth: $screenSm;
+
+    display: grid;
+    grid-template-columns: minmax(auto, $menuMaxWidth) 1fr;
+    height: 100vh;
+    background: $bgColor;
+
+    @media screen and (max-width: $screenSm) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        gap: $containerGap;
+        padding: 1rem;
+
+        .logoContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menuContainer {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            height: 100%;
+
+            &.open {
+                @media screen and (max-width: $screenSm) {
+                    display: flex;
+                }
+            }
+
+            &.inline {
+                @media screen and (max-width: $screenSm) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .container {
+            width: 100%;
+            max-width: $contentMaxWidth;
+            padding: $containerPadding;
+            box-sizing: border-box;
+
+            /* Keep item in the optical center */
+            @media screen and (min-width: calc($menuMaxWidth * 2 + $contentMaxWidth)) {
+                margin-right: $menuMaxWidth;
+            }
+        }
+    }
+}
+
+.logoutButton {
+    margin-top: auto;
+}

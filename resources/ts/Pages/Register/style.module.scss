@@ -1,0 +1,14 @@
+@import '../../../scss/variables.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: $containerGap;
+}
+
+.registerLink {
+    margin-top: $containerGap;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+@import '../../../scss/variables.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 0.9rem;
+    margin: 0 auto;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.angle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    color: $darkColor;
+    transition: color 200ms ease-in-out;
+    font-size: 1.2rem;
+
+    &:hover {
+        opacity: $hoverOpacity;
+    }
+
+    &:active {
+        opacity: $activeOpacity;
+    }
+
+    &[data-disabled="true"] {
+        color: $mutedColor;
+        cursor: not-allowed;
+        pointer-events: none;
+
+        &:hover {
+            color: $mutedColor;
+        }
+    }
+}
+
+
+.muted {
+    color: $mutedColor;
+}

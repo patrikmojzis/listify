@@ -1,0 +1,99 @@
+@import "variables";
+@import "animations";
+
+body {
+    background-color: $bgColor;
+    color: $darkColor;
+    -webkit-font-smoothing: antialiased;
+    font-size: $fontSize;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, Arimo, sans-serif;
+}
+
+h1, h2, h3, {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: $fontSizeH1;
+}
+
+h2 {
+    font-size: $fontSizeH2;
+}
+
+h3 {
+    font-size: $fontSizeH3;
+}
+
+@media screen and (max-width: $screenSm) {
+    $fontSize: calc($fontSize * 0.95);
+    $containerGap: calc($containerGap * 0.785);
+    $containerPadding: calc($containerPadding * 0.785);
+}
+
+@media screen and (max-width: $screenMd) {
+    $fontSize: calc($fontSize * 0.975);
+    $containerGap: calc($containerGap * 0.85);
+    $containerPadding: calc($containerPadding * 0.85);
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    padding: .85rem 0.95rem;
+    border: 1px solid $greyColor;
+    box-sizing: border-box;
+    border-radius: 0.85rem;
+    font-size: $fontSize;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+
+    &.invalid, &[aria-invalid="true"] {
+        border: 1px solid $dangerColor;
+        animation: shake .5s linear;
+    }
+}
+
+
+button {
+    padding: .85rem 1.5rem;
+    border: none;
+    border-radius: 0.85rem;
+    font-size: $fontSize;
+    cursor: pointer;
+    background-color: $primaryColor;
+    color: $lightColor;
+    transition: opacity $pressableTransitionDuration;
+    font-weight: 500;
+
+    &:hover {
+        opacity: $hoverOpacity;
+    }
+
+    &:active {
+        opacity: $activeOpacity;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+a {
+    color: $primaryColor;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity $pressableTransitionDuration;
+    cursor: pointer;
+
+    &:hover {
+        opacity: $hoverOpacity;
+    }
+
+    &:active {
+        opacity: $activeOpacity;
+    }
+}

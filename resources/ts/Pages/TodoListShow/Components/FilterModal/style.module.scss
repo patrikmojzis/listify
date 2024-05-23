@@ -1,0 +1,27 @@
+@import '../../../../../scss/variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
